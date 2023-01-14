@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             
             
-            //Name of athlete
+            //Name of person
             
             HStack{
                 
@@ -50,6 +50,32 @@ struct ContentView: View {
                    Spacer()
                     
                 }
+            }
+            
+            //Picture of person
+            
+            VStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 300)
+                    .padding()
+                Spacer()
+                    .frame(height: 175)
+            }
+            
+            //Description of person
+            
+            VStack{
+                Spacer()
+                    .frame(height: 450)
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 200)
+                    .padding()
+                
+                
+                
+                
             }
         }
     }
