@@ -20,38 +20,44 @@ struct ContentView: View {
             
             RoundedRectangle(cornerRadius: 50)                .foregroundColor(.black)
                 .frame(width: 375, height: 750)
-            
-            //Layer 3 Logo
             HStack{
-                Spacer()
-                VStack{
-                    
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 100)
-                        .padding()
+                //Layer 3 Logo
+                HStack{
                     Spacer()
-                    
-                    
+                    VStack{
+                        
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: 100, height: 100)
+                            .padding()
+                        Spacer()
+                         
+                        
+                        
+                    }
                 }
-            }
-            
-            
-            //Name of person
-            
-            HStack{
+                Spacer()
                 
-                VStack{
+                //Name of person
+                
+                HStack{
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 100)
-                        .padding()
-                   Spacer()
-                    
+                    VStack{
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 100)
+                            .padding()
+                        Spacer()
+                        
+                    }
                 }
+                Spacer()
+                    .frame(width: 10)
+                
+                
+
             }
-            
             //Picture of person
             
             VStack{
