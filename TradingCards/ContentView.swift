@@ -21,17 +21,25 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 50)                .foregroundColor(.black)
                 .frame(width: 375, height: 750)
             HStack{
+                
+                
+                
                 //Layer 3 Logo
                 HStack{
                     Spacer()
                     VStack{
-                        
-                        Circle()
-                            .foregroundColor(.white)
-                            .frame(width: 100, height: 100)
-                            .padding()
+                        ZStack{
+                            Circle()
+                                .foregroundColor(.white)
+                                .frame(width: 100, height: 100)
+                                .padding()
+                            Image("NadalLogo")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                
+                        }
                         Spacer()
-                         
+                        
                         
                         
                     }
@@ -44,27 +52,45 @@ struct ContentView: View {
                     
                     VStack{
                         
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 100)
-                            .padding()
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(.white)
+                                .frame(width: 200, height: 100)
+                                .padding()
+                            
+                            Text("Rafael Nadal")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("Copperplate-Bold", size: 25))
+                            
+                            
+                        }
                         Spacer()
-                        
                     }
                 }
                 Spacer()
                     .frame(width: 10)
                 
                 
-
+                
+                
             }
             //Picture of person
             
             VStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
-                    .frame(width: 350, height: 300)
-                    .padding()
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.white)
+                        .frame(width: 350, height: 300)
+                        .padding()
+                    
+                    Image("NadalPicture")
+                        .resizable()
+                        .frame(width: 340, height: 290)
+                        .clipped()
+                  
+                        
+                    
+                }
                 Spacer()
                     .frame(height: 175)
             }
