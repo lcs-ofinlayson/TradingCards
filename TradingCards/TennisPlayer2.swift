@@ -1,13 +1,19 @@
 //
-//  ContentView.swift
+//  TennisPlayer2.swift
 //  TradingCards
 //
-//  Created by Oliver Finlayson on 2023-01-12.
+//  Created by Oliver Finlayson on 2023-01-15.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct TennisPlayer2: View {
+    
+    let name: String
+    let logoName: String
+    let imageName: String
+    let description: String
+    
     var body: some View {
         ZStack{
             
@@ -25,7 +31,6 @@ struct ContentView: View {
                 
                 
                 //Layer 3 Logo
-                //logoName
                 HStack{
                     Spacer()
                     VStack{
@@ -34,7 +39,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .frame(width: 100, height: 100)
                                 .padding()
-                            Image("NadalLogo")
+                            Image(logoName)
                                 .resizable()
                                 .frame(width: 60, height: 60)
                             
@@ -48,7 +53,7 @@ struct ContentView: View {
                 Spacer()
                 
                 //Name of person
-                //playerName
+                
                 HStack{
                     
                     VStack{
@@ -59,7 +64,7 @@ struct ContentView: View {
                                 .frame(width: 200, height: 100)
                                 .padding()
                             
-                            Text("Rafael Nadal")
+                            Text(name)
                                 .foregroundColor(Color.black)
                                 .font(Font.custom("Copperplate-Bold", size: 25))
                             
@@ -76,7 +81,7 @@ struct ContentView: View {
                 
             }
             //Picture of person
-            //imageName
+            
             VStack{
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
@@ -84,7 +89,7 @@ struct ContentView: View {
                         .frame(width: 350, height: 300)
                         .padding()
                     
-                    Image("NadalPicture")
+                    Image(imageName)
                         .resizable()
                         .frame(width: 300, height: 300)
                         .scaledToFit()
@@ -98,7 +103,7 @@ struct ContentView: View {
             }
             
             //Description of person
-            //"description"
+            
             VStack{
                 Spacer()
                     .frame(height: 450)
@@ -109,9 +114,10 @@ struct ContentView: View {
                         .frame(width: 350, height: 200)
                         .padding()
                     
-                    Text("Rafael Nadal is one of the greatest tennis players of all time, with 22 grand slams, 209 weeks at number 1 in world rankings, and a record 92 ATP singles titles.")
+                    Text(description)
                         .foregroundColor(Color.black)
                         .font(Font.custom("Copperplate-Bold", size: 20))
+                        .padding()
                         .padding()
             
                 }
@@ -120,11 +126,10 @@ struct ContentView: View {
             }
         }
     }
-    
 }
-struct ContentView_Previews: PreviewProvider {
+
+struct TennisPlayer2_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TennisPlayer(name: "Novak Djokovic", logoName: "novLogo", imageName: "novImage", description: "Novak Djokovic is a top tennis player of this generation, with 22 Grand Slams, 92 ATP titles, and a record 373 weeks at number 1.")
     }
-    
 }
