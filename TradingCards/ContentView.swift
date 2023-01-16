@@ -36,7 +36,7 @@ struct ContentView: View {
                             Image("NadalLogo")
                                 .resizable()
                                 .frame(width: 60, height: 60)
-                                
+                            
                         }
                         Spacer()
                         
@@ -59,7 +59,7 @@ struct ContentView: View {
                                 .padding()
                             
                             Text("Rafael Nadal")
-                                .foregroundColor(Color.red)
+                                .foregroundColor(Color.black)
                                 .font(Font.custom("Copperplate-Bold", size: 25))
                             
                             
@@ -85,10 +85,11 @@ struct ContentView: View {
                     
                     Image("NadalPicture")
                         .resizable()
-                        .frame(width: 340, height: 290)
+                        .frame(width: 340, height: 300)
+                        .scaledToFit()
                         .clipped()
-                  
-                        
+                    
+                    
                     
                 }
                 Spacer()
@@ -100,12 +101,19 @@ struct ContentView: View {
             VStack{
                 Spacer()
                     .frame(height: 450)
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
-                    .frame(width: 350, height: 200)
-                    .padding()
-                
-                
+                ZStack{
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.white)
+                        .frame(width: 350, height: 200)
+                        .padding()
+                    
+                    Text("Rafael Nadal is one of the greatest tennis players of all time, with 22 grand slams, 209 weeks at number 1 in world rankings, and a record 92 ATP singles titles.")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("Copperplate-Bold", size: 20))
+                        .padding()
+            
+                }
                 
                 
             }
